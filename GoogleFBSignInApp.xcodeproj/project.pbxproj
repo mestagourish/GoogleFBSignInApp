@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		184552EA209D83DC0028E43F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184552E9209D83DB0028E43F /* Bolts.framework */; };
+		184552EC209D83F40028E43F /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184552EB209D83F40028E43F /* FBSDKShareKit.framework */; };
+		18571A6A20A571AE00F3EA12 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18571A6920A571AE00F3EA12 /* SplashScreenViewController.swift */; };
+		1857709820A990FC00F8A164 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1857709720A990FB00F8A164 /* UserNotificationsUI.framework */; };
+		187325B620AB146900821C1F /* Sha1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187325B520AB146900821C1F /* Sha1Controller.swift */; };
+		187CE86320B415C300761AF3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187CE86220B415C300761AF3 /* LoginViewController.swift */; };
+		187CE86520B415DD00761AF3 /* OTPConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187CE86420B415DD00761AF3 /* OTPConfirmationViewController.swift */; };
+		187CE86720B415ED00761AF3 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187CE86620B415ED00761AF3 /* SwipeViewController.swift */; };
+		187CE86920B4165C00761AF3 /* MomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187CE86820B4165C00761AF3 /* MomentViewController.swift */; };
+		187CE86B20B416F900761AF3 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187CE86A20B416F900761AF3 /* CustomCollectionViewCell.swift */; };
+		187CE86F20B420F300761AF3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187CE86E20B420F300761AF3 /* HomeViewController.swift */; };
+		18A0E70220A954DF00AE9170 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0E70120A954DF00AE9170 /* RegisterViewController.swift */; };
+		18A0E70420A95E9F00AE9170 /* OTPVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0E70320A95E9F00AE9170 /* OTPVerificationViewController.swift */; };
+		18D4BE7E20A1B30800993168 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D4BE7D20A1B30800993168 /* Default-568h@2x.png */; };
+		18E7716C209C3C0B004FF239 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E7716B209C3C0B004FF239 /* AppDelegate.swift */; };
+		18E7716E209C3C0B004FF239 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E7716D209C3C0B004FF239 /* ViewController.swift */; };
+		18E77171209C3C0B004FF239 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E7716F209C3C0B004FF239 /* Main.storyboard */; };
+		18E77173209C3C0B004FF239 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E77172209C3C0B004FF239 /* Assets.xcassets */; };
+		18E77190209C4411004FF239 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E7718E209C4410004FF239 /* FBSDKCoreKit.framework */; };
+		18E77191209C4411004FF239 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E7718F209C4411004FF239 /* FBSDKLoginKit.framework */; };
+		18E77194209C6567004FF239 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18E77193209C6567004FF239 /* GoogleService-Info.plist */; };
+		18EDFF51209DCE9C000B1954 /* Home1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EDFF50209DCE9C000B1954 /* Home1ViewController.swift */; };
+		6E183BD4E2B2A5301E8CF4E9 /* Pods_GoogleFBSignInApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25200AEC5F0C846DC8275C65 /* Pods_GoogleFBSignInApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		184552E9209D83DB0028E43F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		184552EB209D83F40028E43F /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		18571A6920A571AE00F3EA12 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		1857709720A990FB00F8A164 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		187325B520AB146900821C1F /* Sha1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sha1Controller.swift; sourceTree = "<group>"; };
+		187CE86220B415C300761AF3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		187CE86420B415DD00761AF3 /* OTPConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPConfirmationViewController.swift; sourceTree = "<group>"; };
+		187CE86620B415ED00761AF3 /* SwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		187CE86820B4165C00761AF3 /* MomentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentViewController.swift; sourceTree = "<group>"; };
+		187CE86A20B416F900761AF3 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		187CE86E20B420F300761AF3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		18A0E70120A954DF00AE9170 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		18A0E70320A95E9F00AE9170 /* OTPVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerificationViewController.swift; sourceTree = "<group>"; };
+		18A0E70520A9651100AE9170 /* EncoAR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EncoAR.entitlements; sourceTree = "<group>"; };
+		18D4BE7D20A1B30800993168 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		18E77168209C3C0B004FF239 /* GoogleFBSignInApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleFBSignInApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E7716B209C3C0B004FF239 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18E7716D209C3C0B004FF239 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18E77170209C3C0B004FF239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18E77172209C3C0B004FF239 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18E77177209C3C0B004FF239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18E7718E209C4410004FF239 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		18E7718F209C4411004FF239 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		18E77192209C589D004FF239 /* GoogleFBSignInApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoogleFBSignInApp.entitlements; sourceTree = "<group>"; };
+		18E77193209C6567004FF239 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		18E77199209C70DC004FF239 /* GoogleFBSignInApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleFBSignInApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		18EDFF50209DCE9C000B1954 /* Home1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home1ViewController.swift; sourceTree = "<group>"; };
+		25200AEC5F0C846DC8275C65 /* Pods_GoogleFBSignInApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleFBSignInApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD270DEB8EE5746DA2A6E17F /* Pods-GoogleFBSignInApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleFBSignInApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleFBSignInApp/Pods-GoogleFBSignInApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E5861EB11F912F3FF6EF8C11 /* Pods-GoogleFBSignInApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleFBSignInApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleFBSignInApp/Pods-GoogleFBSignInApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18E77165209C3C0B004FF239 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1857709820A990FC00F8A164 /* UserNotificationsUI.framework in Frameworks */,
+				6E183BD4E2B2A5301E8CF4E9 /* Pods_GoogleFBSignInApp.framework in Frameworks */,
+				18E77190209C4411004FF239 /* FBSDKCoreKit.framework in Frameworks */,
+				184552EC209D83F40028E43F /* FBSDKShareKit.framework in Frameworks */,
+				18E77191209C4411004FF239 /* FBSDKLoginKit.framework in Frameworks */,
+				184552EA209D83DC0028E43F /* Bolts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0277CA8432A0F1C728540963 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1857709720A990FB00F8A164 /* UserNotificationsUI.framework */,
+				25200AEC5F0C846DC8275C65 /* Pods_GoogleFBSignInApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18E7715F209C3C0B004FF239 = {
+			isa = PBXGroup;
+			children = (
+				18A0E70520A9651100AE9170 /* EncoAR.entitlements */,
+				18D4BE7D20A1B30800993168 /* Default-568h@2x.png */,
+				18E7716A209C3C0B004FF239 /* GoogleFBSignInApp */,
+				18E77169209C3C0B004FF239 /* Products */,
+				8C5A195B1FB780CB7AD7E48A /* Pods */,
+				0277CA8432A0F1C728540963 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		18E77169209C3C0B004FF239 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18E77168209C3C0B004FF239 /* GoogleFBSignInApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18E7716A209C3C0B004FF239 /* GoogleFBSignInApp */ = {
+			isa = PBXGroup;
+			children = (
+				18E77192209C589D004FF239 /* GoogleFBSignInApp.entitlements */,
+				18E77193209C6567004FF239 /* GoogleService-Info.plist */,
+				187325B520AB146900821C1F /* Sha1Controller.swift */,
+				18E7716B209C3C0B004FF239 /* AppDelegate.swift */,
+				18EDFF50209DCE9C000B1954 /* Home1ViewController.swift */,
+				18E7716D209C3C0B004FF239 /* ViewController.swift */,
+				18A0E70120A954DF00AE9170 /* RegisterViewController.swift */,
+				18A0E70320A95E9F00AE9170 /* OTPVerificationViewController.swift */,
+				18E7716F209C3C0B004FF239 /* Main.storyboard */,
+				18571A6920A571AE00F3EA12 /* SplashScreenViewController.swift */,
+				187CE86220B415C300761AF3 /* LoginViewController.swift */,
+				187CE86420B415DD00761AF3 /* OTPConfirmationViewController.swift */,
+				187CE86620B415ED00761AF3 /* SwipeViewController.swift */,
+				187CE86E20B420F300761AF3 /* HomeViewController.swift */,
+				187CE86820B4165C00761AF3 /* MomentViewController.swift */,
+				187CE86A20B416F900761AF3 /* CustomCollectionViewCell.swift */,
+				18E77172209C3C0B004FF239 /* Assets.xcassets */,
+				184552EB209D83F40028E43F /* FBSDKShareKit.framework */,
+				184552E9209D83DB0028E43F /* Bolts.framework */,
+				18E7718E209C4410004FF239 /* FBSDKCoreKit.framework */,
+				18E7718F209C4411004FF239 /* FBSDKLoginKit.framework */,
+				18E77177209C3C0B004FF239 /* Info.plist */,
+				18E77199209C70DC004FF239 /* GoogleFBSignInApp-Bridging-Header.h */,
+			);
+			path = GoogleFBSignInApp;
+			sourceTree = "<group>";
+		};
+		8C5A195B1FB780CB7AD7E48A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD270DEB8EE5746DA2A6E17F /* Pods-GoogleFBSignInApp.debug.xcconfig */,
+				E5861EB11F912F3FF6EF8C11 /* Pods-GoogleFBSignInApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18E77167209C3C0B004FF239 /* GoogleFBSignInApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18E7717A209C3C0B004FF239 /* Build configuration list for PBXNativeTarget "GoogleFBSignInApp" */;
+			buildPhases = (
+				A668DD14937499688A7F0F86 /* [CP] Check Pods Manifest.lock */,
+				18E77164209C3C0B004FF239 /* Sources */,
+				18E77165209C3C0B004FF239 /* Frameworks */,
+				18E77166209C3C0B004FF239 /* Resources */,
+				DCC65B8364A77EF0AB1B9CA3 /* [CP] Embed Pods Frameworks */,
+				426D6C559574CFA1C9EB2EF2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoogleFBSignInApp;
+			productName = GoogleFBSignInApp;
+			productReference = 18E77168209C3C0B004FF239 /* GoogleFBSignInApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18E77160209C3C0B004FF239 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Edot;
+				TargetAttributes = {
+					18E77167209C3C0B004FF239 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 18E77163209C3C0B004FF239 /* Build configuration list for PBXProject "GoogleFBSignInApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18E7715F209C3C0B004FF239;
+			productRefGroup = 18E77169209C3C0B004FF239 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18E77167209C3C0B004FF239 /* GoogleFBSignInApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18E77166209C3C0B004FF239 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E77194209C6567004FF239 /* GoogleService-Info.plist in Resources */,
+				18E77173209C3C0B004FF239 /* Assets.xcassets in Resources */,
+				18D4BE7E20A1B30800993168 /* Default-568h@2x.png in Resources */,
+				18E77171209C3C0B004FF239 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		426D6C559574CFA1C9EB2EF2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GoogleFBSignInApp/Pods-GoogleFBSignInApp-resources.sh",
+				"${PODS_ROOT}/GoogleAuthUtilities/Frameworks/frameworks/GoogleAuthUtilities.framework/Resources/GTMOAuth2ViewTouch.xib",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GTMOAuth2ViewTouch.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleFBSignInApp/Pods-GoogleFBSignInApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A668DD14937499688A7F0F86 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoogleFBSignInApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCC65B8364A77EF0AB1B9CA3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GoogleFBSignInApp/Pods-GoogleFBSignInApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleFBSignInApp/Pods-GoogleFBSignInApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18E77164209C3C0B004FF239 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E7716E209C3C0B004FF239 /* ViewController.swift in Sources */,
+				187325B620AB146900821C1F /* Sha1Controller.swift in Sources */,
+				18A0E70220A954DF00AE9170 /* RegisterViewController.swift in Sources */,
+				18E7716C209C3C0B004FF239 /* AppDelegate.swift in Sources */,
+				187CE86320B415C300761AF3 /* LoginViewController.swift in Sources */,
+				187CE86720B415ED00761AF3 /* SwipeViewController.swift in Sources */,
+				18A0E70420A95E9F00AE9170 /* OTPVerificationViewController.swift in Sources */,
+				187CE86B20B416F900761AF3 /* CustomCollectionViewCell.swift in Sources */,
+				18571A6A20A571AE00F3EA12 /* SplashScreenViewController.swift in Sources */,
+				18EDFF51209DCE9C000B1954 /* Home1ViewController.swift in Sources */,
+				187CE86520B415DD00761AF3 /* OTPConfirmationViewController.swift in Sources */,
+				187CE86F20B420F300761AF3 /* HomeViewController.swift in Sources */,
+				187CE86920B4165C00761AF3 /* MomentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		18E7716F209C3C0B004FF239 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18E77170209C3C0B004FF239 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18E77178209C3C0B004FF239 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18E77179209C3C0B004FF239 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18E7717B209C3C0B004FF239 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD270DEB8EE5746DA2A6E17F /* Pods-GoogleFBSignInApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = EncoAR.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6AR62UW3PD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleFBSignInApp",
+				);
+				INFOPLIST_FILE = GoogleFBSignInApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.edot.Groceries.GoogleFBSignInApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleFBSignInApp/GoogleFBSignInApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18E7717C209C3C0B004FF239 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5861EB11F912F3FF6EF8C11 /* Pods-GoogleFBSignInApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = EncoAR.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6AR62UW3PD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleFBSignInApp",
+				);
+				INFOPLIST_FILE = GoogleFBSignInApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.edot.Groceries.GoogleFBSignInApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleFBSignInApp/GoogleFBSignInApp-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18E77163209C3C0B004FF239 /* Build configuration list for PBXProject "GoogleFBSignInApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18E77178209C3C0B004FF239 /* Debug */,
+				18E77179209C3C0B004FF239 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18E7717A209C3C0B004FF239 /* Build configuration list for PBXNativeTarget "GoogleFBSignInApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18E7717B209C3C0B004FF239 /* Debug */,
+				18E7717C209C3C0B004FF239 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18E77160209C3C0B004FF239 /* Project object */;
+}

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>GoogleFBSignInApp.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>0BCD2D9C266E9783D323D390D0A7E1AC35E0AADB</string>
+				<key>dateExpires</key>
+				<string>24/05/18</string>
+				<key>type</key>
+				<string>iOS Development</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0BCD2D9C266E9783D323D390D0A7E1AC35E0AADB</string>
+						<key>dateExpires</key>
+						<string>24/05/18</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>Bolts.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>6AR62UW3PD</string>
+						<key>name</key>
+						<string>ruchin dayal</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0BCD2D9C266E9783D323D390D0A7E1AC35E0AADB</string>
+						<key>dateExpires</key>
+						<string>24/05/18</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>FBSDKCoreKit.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>6AR62UW3PD</string>
+						<key>name</key>
+						<string>ruchin dayal</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0BCD2D9C266E9783D323D390D0A7E1AC35E0AADB</string>
+						<key>dateExpires</key>
+						<string>24/05/18</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>FBSDKLoginKit.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>6AR62UW3PD</string>
+						<key>name</key>
+						<string>ruchin dayal</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0BCD2D9C266E9783D323D390D0A7E1AC35E0AADB</string>
+						<key>dateExpires</key>
+						<string>24/05/18</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>FBSDKShareKit.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>6AR62UW3PD</string>
+						<key>name</key>
+						<string>ruchin dayal</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0BCD2D9C266E9783D323D390D0A7E1AC35E0AADB</string>
+						<key>dateExpires</key>
+						<string>24/05/18</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>GTMSessionFetcher.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>6AR62UW3PD</string>
+						<key>name</key>
+						<string>ruchin dayal</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0BCD2D9C266E9783D323D390D0A7E1AC35E0AADB</string>
+						<key>dateExpires</key>
+						<string>24/05/18</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>GoogleToolboxForMac.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>6AR62UW3PD</string>
+						<key>name</key>
+						<string>ruchin dayal</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0BCD2D9C266E9783D323D390D0A7E1AC35E0AADB</string>
+						<key>dateExpires</key>
+						<string>24/05/18</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>Protobuf.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>6AR62UW3PD</string>
+						<key>name</key>
+						<string>ruchin dayal</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0BCD2D9C266E9783D323D390D0A7E1AC35E0AADB</string>
+						<key>dateExpires</key>
+						<string>24/05/18</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>TwitterCore.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>6AR62UW3PD</string>
+						<key>name</key>
+						<string>ruchin dayal</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0BCD2D9C266E9783D323D390D0A7E1AC35E0AADB</string>
+						<key>dateExpires</key>
+						<string>24/05/18</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>TwitterKit.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>6AR62UW3PD</string>
+						<key>name</key>
+						<string>ruchin dayal</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>0BCD2D9C266E9783D323D390D0A7E1AC35E0AADB</string>
+						<key>dateExpires</key>
+						<string>24/05/18</string>
+						<key>type</key>
+						<string>iOS Development</string>
+					</dict>
+					<key>name</key>
+					<string>nanopb.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>6AR62UW3PD</string>
+						<key>name</key>
+						<string>ruchin dayal</string>
+					</dict>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>6AR62UW3PD.com.edot.Groceries.GoogleFBSignInApp</string>
+				<key>aps-environment</key>
+				<string>development</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>6AR62UW3PD</string>
+				<key>get-task-allow</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>GoogleFBSignInApp.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>807a5ed1-0731-4bc7-a1bb-784199849350</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: com.edot.Groceries.GoogleFBSignInApp</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>6AR62UW3PD</string>
+				<key>name</key>
+				<string>ruchin dayal</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
