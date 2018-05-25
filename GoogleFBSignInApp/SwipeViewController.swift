@@ -12,12 +12,14 @@ class SwipeViewController:  UIPageViewController,UIPageViewControllerDataSource,
     var StoryBoard : UIStoryboard! = nil
     var login : UIViewController!
     var home : UIViewController!
+    var momentAsFirstScreen : Bool = false
+    var aViewLayer : collectionViewController?
     //Initialize the screens
     lazy var ViewControllerList : [UIViewController] = {
         StoryBoard = UIStoryboard(name: "Main", bundle: nil)
         if isLoggedIn() {
             home = StoryBoard.instantiateViewController(withIdentifier: "Home")
-            login = StoryBoard.instantiateViewController(withIdentifier: "MomentScreen")
+            login = StoryBoard.instantiateViewController(withIdentifier: "Moment")
         }else {
             home = StoryBoard.instantiateViewController(withIdentifier: "Home")
             login = StoryBoard.instantiateViewController(withIdentifier: "Login")
@@ -28,9 +30,9 @@ class SwipeViewController:  UIPageViewController,UIPageViewControllerDataSource,
     var pageControl = UIPageControl()
     func configurePageControl() {
         // The total number of pages that are available is based on how many available colors we have.
-        pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 50,width: UIScreen.main.bounds.width,height: 50))
+        pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 44,width: UIScreen.main.bounds.width,height: 50))
         self.pageControl.numberOfPages = ViewControllerList.count
-        if isLoggedIn(){
+        if isLoggedIn() {
             self.pageControl.currentPage = 1
         }
         else {
@@ -44,6 +46,7 @@ class SwipeViewController:  UIPageViewController,UIPageViewControllerDataSource,
     }
     func isLoggedIn() -> Bool {
         return UserDefaults.standard.bool(forKey: "LoggedIn")
+        //return false
     }
     
     override func viewDidLoad() {
@@ -51,13 +54,14 @@ class SwipeViewController:  UIPageViewController,UIPageViewControllerDataSource,
         self.dataSource = self
         self.delegate = self
         // Do any additional setup after loading the view.
-        if isLoggedIn() {
-            // call ther Moment screen her
+        if isLoggedIn(){
+            // call the Moment screen here
             if let firstViewController = ViewControllerList.last{
-                self.setViewControllers([firstViewController], direction: .reverse, animated: true, completion: nil)
+                self.setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
             }
         }
         else {
+            // call the Login screen here
             if let FirstViewController = ViewControllerList.first {
                 self.setViewControllers([FirstViewController], direction: .forward, animated: true, completion: nil)
             }
@@ -65,16 +69,18 @@ class SwipeViewController:  UIPageViewController,UIPageViewControllerDataSource,
         
         configurePageControl()
     }
-    override func viewDidLayoutSubviews() {
+    /*override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         for view in self.view.subviews{
             if view is UIScrollView{
                 view.frame = UIScreen.main.bounds
             }else if view is UIPageControl{
+                //view.tintColor = UIColor.black
+                view.tintColor = UIColor.clear
                 view.backgroundColor = UIColor.clear
             }
         }
-    }
+    }*/
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -82,7 +88,9 @@ class SwipeViewController:  UIPageViewController,UIPageViewControllerDataSource,
     }
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         let pageContentViewController = pageViewController.viewControllers![0]
+        
         self.pageControl.currentPage = ViewControllerList.index(of: pageContentViewController)!
+        //self.pageControl.tintColor = UIColor.red
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -113,7 +121,7 @@ class SwipeViewController:  UIPageViewController,UIPageViewControllerDataSource,
         
         return ViewControllerList[nextIndex]
     }
-    
+    /*
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return ViewControllerList.count
     }
@@ -123,7 +131,7 @@ class SwipeViewController:  UIPageViewController,UIPageViewControllerDataSource,
         }
         return firstViewControllerIndex
     }
-    
+    */
 }
 
 

@@ -7,13 +7,5 @@ target 'GoogleFBSignInApp' do
 
   # Pods for GoogleFBSignInApp
   pod 'Firebase/Auth'
-  pod 'Google/SignIn'
   pod 'Firebase/Messaging'
-  pod 'Bolts'
-  pod 'FBSDKCoreKit'
-  pod 'FBSDKLoginKit'
-  pod 'FBSDKShareKit'
-  #use_frameworks!
-  #pod 'Fabric'
-  pod 'TwitterKit'
 end

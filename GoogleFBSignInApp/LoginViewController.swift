@@ -21,7 +21,6 @@ class LoginViewController: UIViewController {
         Login()
     }
     func StartAnimating(){
-        //Loading.center = self.view.center
         view.addSubview(Loading)
         Loading.translatesAutoresizingMaskIntoConstraints = true
         Loading.hidesWhenStopped = true
@@ -35,18 +34,16 @@ class LoginViewController: UIViewController {
             UIApplication.shared.endIgnoringInteractionEvents()
             
         }
-        
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //StartAnimating()
-        // Do any additional setup after loading the view.
+        //Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        //Dispose of any resources that can be recreated.
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -78,11 +75,7 @@ class LoginViewController: UIViewController {
                         print(json)
                         for i in json as! [[String: AnyObject]]
                         {
-                            //print(i["Email"]!)
-                            //print(i["Password"]!)
                             print(i["UserId"]!)
-                            //self.strEmailData = i["Email"] as! String
-                            //self.strPassword = i["Password"] as! String
                             self.strUserId = i["UserId"] as! Int
                             
                         }
@@ -92,24 +85,6 @@ class LoginViewController: UIViewController {
                     }
                     DispatchQueue.main.async {
                         self.sendOtp()
-                        /*var Encrypt : String!
-                        Encrypt = Sha1Controller.SHA1.hexString(from: "\(self.txtUserPass.text!)" )
-                        print(Encrypt)
-                        if self.strEmailData == self.txtUserEmail.text && self.strPassword == Encrypt
-                        {
-                            self.StopAnimating()
-                            print("You Loged In")
-                            self.txtUserEmail.text = ""
-                            self.txtUserPass.text = ""
-                            self.performSegue(withIdentifier: "Home", sender: self)
-                            
-                        }
-                        else
-                        {
-                            self.StopAnimating()
-                            print("Wrong Email or Password")
-                            self.CreateAlert(tittle: "Alert", message: "Wrong Credential")
-                        }*/
                     }
                 }
                 else{
@@ -145,9 +120,6 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? OTPConfirmationViewController
         {
-            //destination.strEmail = txtEmail.text
-            //destination.strPassword = txtPassword.text
-            //destination.strPhoneNo = txtPhoneNumber.text
             destination.strUserId = self.strUserId
         }
     }

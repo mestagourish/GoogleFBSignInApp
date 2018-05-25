@@ -11,7 +11,8 @@ import Firebase
 import UserNotifications
 class OTPConfirmationViewController: UIViewController,MessagingDelegate{
     @IBOutlet weak var lblOtpConfirmation: UITextField!
-        var strUserId : Int!
+    var strUserId : Int!
+    var mommentAsFirstScreen : Bool = false
      var Loading:UIActivityIndicatorView = UIActivityIndicatorView (frame : CGRect(x: 180, y: 430, width: 50, height: 50))
     @IBAction func btnConfirm(_ sender: UIButton) {
         self.view.endEditing(true)
@@ -57,7 +58,6 @@ class OTPConfirmationViewController: UIViewController,MessagingDelegate{
         let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationID! as! String, verificationCode: self.lblOtpConfirmation.text!)
         Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
             if error != nil {
-                // ...
                 self.StopAnimating()
                 self.CreateAlert(tittle: "Alert", message: "Wrong OTP")
                 return
@@ -69,13 +69,18 @@ class OTPConfirmationViewController: UIViewController,MessagingDelegate{
             UserDefaults.standard.set(true, forKey: "LoggedIn")
             //self.CreateAlert(tittle: "Alert", message: "Successfully Registered")
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                //self.navigationController?.popToRootViewController(animated: true)
-                //self.navigationController?.popToViewController(MomentViewController(), animated: true)
                 self.performSegue(withIdentifier: "goToSwipeScreen", sender: self)
             }
             
         }
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? SwipeViewController
+        {
+            //destination
+            destination.momentAsFirstScreen = true
+        }
     }
     func callApi() {
         let Url = String(format: "http://wservicedeploy.pauej4cear.us-east-2.elasticbeanstalk.com/rest/Login/OTPVerification")

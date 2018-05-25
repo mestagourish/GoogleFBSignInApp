@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import FBSDKCoreKit
+//import FBSDKCoreKit
 import Firebase
 import FirebaseMessaging
-import Google
-import TwitterKit
+//import Google
+//import TwitterKit
 import UserNotifications
 
 @UIApplicationMain
@@ -40,22 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
         
         application.registerForRemoteNotifications()
 
-        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-       TWTRTwitter.sharedInstance().start(withConsumerKey:"I9Ex1Ga63bmyTBolCBlSrXGle", consumerSecret: "HUltzrnK1daXcj38Crdbh4Y6iRrqnCaKryOUFzW6VKGR3KO4hF")
         return true
     }
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        let facebookAuthentication  = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication:options [UIApplicationOpenURLOptionsKey.sourceApplication] as! String, annotation: [UIApplicationOpenURLOptionsKey.annotation])
-        
-        let googleAuthentication = GIDSignIn.sharedInstance().handle(url,
-                                          sourceApplication:options [UIApplicationOpenURLOptionsKey.sourceApplication] as! String,
-                                          annotation: [UIApplicationOpenURLOptionsKey.annotation])
-        
-        let twitterAuthentication = TWTRTwitter.sharedInstance().application(app, open: url, options: options)
-        //return googleAuthentication
-        return facebookAuthentication || twitterAuthentication || googleAuthentication
-        }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -98,6 +84,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
             return
         }
     }
+    
+    
 
 }
 
