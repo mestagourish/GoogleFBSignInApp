@@ -10,16 +10,47 @@ import UIKit
 import FirebaseMessaging
 import Firebase
 class LoginViewController: UIViewController {
+    var PostCall:ApiServiceMethod?
     @IBOutlet weak var lblMobileNumber: UITextField!
-    var strUserId : Int!
-    var strPhoneNumber: String = "+91"
+    @IBOutlet weak var txtCountryCode: UITextField!
+    var strCountryCode: String = ""
+    var strPhoneNumber : String = ""
     var Loading:UIActivityIndicatorView = UIActivityIndicatorView (frame : CGRect(x: 180, y: 430, width: 50, height: 50))
+    /*
+     10/05/2018
+     //Login button Click Event
+     */
+    
     @IBAction func btnLogin(_ sender: UIButton) {
         self.view.endEditing(true)
         self.lblMobileNumber.resignFirstResponder()
-        StartAnimating()
-        Login()
+        if lblMobileNumber.text?.count == 10 {
+            if Conectivity.isConnectedToInternet()
+            {
+                print("Yes! internet is available.")
+                //StartAnimating()
+                ActivityLoader.StartAnimating(view: self.view)
+                Login()
+            }
+            else
+            {
+                DispatchQueue.main.async {
+                    CreateAlerts.DisplayAlert(tittle: "Alert", message: "Check your Internet Conectivity", view: UIApplication.topViewController()!)
+                }
+            }
+        }
+        else
+        {
+            CreateAlerts.DisplayAlert(tittle: "Alert", message: "Wrong Phone Number", view: self)
+        }
+        
+        
     }
+    /*
+     10/05/2018
+     // Function Starts the circular Loader and stops the user interaction with screen
+     */
+    
     func StartAnimating(){
         view.addSubview(Loading)
         Loading.translatesAutoresizingMaskIntoConstraints = true
@@ -28,15 +59,32 @@ class LoginViewController: UIViewController {
         Loading.startAnimating()
         UIApplication.shared.beginIgnoringInteractionEvents()
     }
+    /*
+     10/05/2018
+     // Function Stops the circular Loader and starts the user interaction with screen
+     */
+    
     func StopAnimating() {
+        //when dealing with UI DispatchQueue.main.async needs to used
         DispatchQueue.main.async {
             self.Loading.stopAnimating()
             UIApplication.shared.endIgnoringInteractionEvents()
-            
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let CountryCode = (Locale.current as NSLocale).object(forKey: .countryCode) as? String {
+            print(CountryCode)
+            let code = countryCode.getCountryPhonceCode(CountryCode)
+            print(code)
+            strCountryCode = "+\(code)"
+        }
+        let locale = Locale.current
+        //CFLocaleCopyISOCountryCodes()
+        print(locale.regionCode!)
+        self.lblMobileNumber.textAlignment = NSTextAlignment.center
+        self.lblMobileNumber.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         //StartAnimating()
         //Do any additional setup after loading the view.
     }
@@ -45,70 +93,79 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         //Dispose of any resources that can be recreated.
     }
+    /*
+     10/05/2018
+     //hides the keypad if user touches the screen other then keypad or textBox
+     */
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    /*
+     10/05/2018
+     //this function calls the api login api Method
+     //creates a user with new userid and the phone number entered by user
+     */
     
     func Login(){
         if self.lblMobileNumber.text == ""
         {
-            StopAnimating()
-            CreateAlert(tittle: "Alert", message: "Please enter the Phone Number")
-            
+            ActivityLoader.StopAnimating(view: self.view)
+            //StopAnimating()
+            //Creates a Alert and display it on the screen
+            CreateAlerts.DisplayAlert(tittle: "Alert", message: "Please enter the Phone Number", view: self)
         }
         else
         {
-            let mobileNumber : String = self.lblMobileNumber.text!
-            let Url = String(format: "http://wservicedeploy.pauej4cear.us-east-2.elasticbeanstalk.com/rest/Login/LoginRegister")
-            let serviceUrl = URL(string: Url)!
-            let parameterDictionary = ["Phone":"\(mobileNumber)"]
-            var request = URLRequest(url: serviceUrl)
-            request.httpMethod = "POST"
-            request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
-            let httpBody = try? JSONSerialization.data(withJSONObject: parameterDictionary, options:.prettyPrinted)
-            request.httpBody = httpBody
-            let session = URLSession.shared
-            session.dataTask(with: request, completionHandler: { (data, response, error) in
-                if data != nil{
-                    do{
-                        let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
-                        print(json)
-                        for i in json as! [[String: AnyObject]]
+            let strmobileNumber : String = self.lblMobileNumber.text!
+            let strUrl = String(format: "\(AppSettings.Urls.strLoginUrl)")
+            let serviceUrl = URL(string: strUrl)!
+            let parameterDictionary = ["Phone":"\(strmobileNumber)"]
+            //Calls the Post method from ApiServiceMethod class
+            ApiServiceMethod.PostRequest(serviceUrl: serviceUrl, parameterDictionary: parameterDictionary, completionHandler: { (data,berror) in
+                if !berror {
+                    if data != nil{
+                        print(data)
+                        for i in data as! [[String: AnyObject]]
                         {
-                            print(i["UserId"]!)
-                            self.strUserId = i["UserId"] as! Int
-                            
+                            print(i["UserID"]!)
+                            staticVariables.iUserID = i["UserID"] as! Int
+                            UserDefaults.standard.set(staticVariables.iUserID!, forKey: "iUserID")
                         }
-                    }catch let jsonError{
-                        print(jsonError)
-                        return
-                    }
-                    DispatchQueue.main.async {
-                        self.sendOtp()
+                        DispatchQueue.main.async {
+                            self.strPhoneNumber = "\(self.strCountryCode)\(strmobileNumber)"
+                            //self.strPhoneNumber = "\(strmobileNumber)"
+                            self.sendOtp()
+                        }
                     }
                 }
-                else{
-                    self.StopAnimating()
-                    self.CreateAlert(tittle: "Alert", message: "No Internet")
-                    return
+                else
+                {
+                    ActivityLoader.StopAnimating(view: self.view)
                 }
- 
-            }).resume()
+                
+            })
         }
     }
+    /*
+     14/05/2018
+     Function Sends the OTP to the phone Number specified by the user and goes to the OTP verification Page
+     */
     func sendOtp() {
-        strPhoneNumber.append(self.lblMobileNumber.text!)
-        PhoneAuthProvider.provider().verifyPhoneNumber(self.strPhoneNumber) { (verificationID, error) in
-            if ((error) != nil) {
+        PhoneAuthProvider.provider().verifyPhoneNumber(self.strPhoneNumber, uiDelegate: nil) { (verificationID, error) in
+           if ((error) != nil) {
                 // Verification code not sent.
                 print(error!)
+                ActivityLoader.StopAnimating(view: self.view)
+                CreateAlerts.DisplayAlert(tittle: "Alert", message: "Wrong Phone Number", view: self)
             } else {
                 // Successful. User gets verification code
                 // Save verificationID in UserDefaults
                 UserDefaults.standard.set(verificationID, forKey: "firebase_verification")
                 UserDefaults.standard.synchronize()
                 //And show the Screen to enter the Code.
-                self.StopAnimating()
+                //self.StopAnimating()
+                ActivityLoader.StopAnimating(view: self.view)
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "GoToOTPVerification", sender: self)
                 }
@@ -117,19 +174,16 @@ class LoginViewController: UIViewController {
             
         }
     }
+    /*
+     14/05/2018
+     Function assigns the userId in OtpConfirmationPage with the current value of  current userId
+     */
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? OTPConfirmationViewController
         {
-            destination.strUserId = self.strUserId
+            //destination.iUserId = self.iUserId
         }
-    }
-    func CreateAlert(tittle:String,message:String)
-    {
-        let alert = UIAlertController(title: tittle, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {ACTION in
-            alert.dismiss(animated: true, completion: nil)
-        }))
-        self.present(alert, animated: true, completion: nil)
     }
     
 }

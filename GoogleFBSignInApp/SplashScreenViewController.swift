@@ -1,8 +1,8 @@
 //
 //  SplashScreenViewController.swift
-//  EncoAR
+//  GoogleFBSignInApp
 //
-//  Created by Snehal on 11/05/18.
+//  Created by Snehal on 21/06/18.
 //  Copyright © 2018 Edot. All rights reserved.
 //
 
@@ -10,15 +10,16 @@ import UIKit
 
 class SplashScreenViewController: UIViewController {
 
+    @IBOutlet weak var imgGif: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        perform(#selector(SplashScreenViewController.SplashScreen), with: nil, afterDelay: 1)
+        perform(#selector(SplashScreen), with: nil, afterDelay: 10)
     }
+    //Goes to the SwipeViewController (Login and Moment screen with swipe feature)
     @objc func SplashScreen()
     {
-       performSegue(withIdentifier: "Swipe", sender: self)
+       // performSegue(withIdentifier: "FromSplashScreen", sender: self)
     }
 
     override func didReceiveMemoryWarning() {

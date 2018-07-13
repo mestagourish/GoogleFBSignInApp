@@ -1,10 +1,23 @@
 PODS:
+  - Alamofire (4.7.2)
+  - AWSAuthCore (2.6.21):
+    - AWSCore (= 2.6.21)
+  - AWSCognito (2.6.21):
+    - AWSCore (= 2.6.21)
+  - AWSCore (2.6.21)
+  - AWSMobileClient (2.6.21):
+    - AWSAuthCore (= 2.6.21)
+  - AWSS3 (2.6.21):
+    - AWSCore (= 2.6.21)
   - Firebase/Auth (4.8.2):
     - Firebase/Core
     - FirebaseAuth (= 4.4.2)
   - Firebase/Core (4.8.2):
     - FirebaseAnalytics (= 4.0.9)
     - FirebaseCore (= 4.0.14)
+  - Firebase/Crash (4.8.2):
+    - Firebase/Core
+    - FirebaseCrash (= 2.0.2)
   - Firebase/Messaging (4.8.2):
     - Firebase/Core
     - FirebaseMessaging (= 2.0.8)
@@ -19,6 +32,12 @@ PODS:
     - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseCore (4.0.14):
     - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseCrash (2.0.2):
+    - FirebaseAnalytics (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - Protobuf (~> 3.1)
   - FirebaseInstanceID (2.0.8):
     - FirebaseCore (~> 4.0)
   - FirebaseMessaging (2.0.8):
@@ -48,15 +67,27 @@ PODS:
   - Protobuf (3.5.0)
 
 DEPENDENCIES:
+  - Alamofire
+  - AWSCognito (~> 2.6.13)
+  - AWSMobileClient (~> 2.6.13)
+  - AWSS3 (~> 2.6.13)
   - Firebase/Auth
+  - Firebase/Crash
   - Firebase/Messaging
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AWSAuthCore
+    - AWSCognito
+    - AWSCore
+    - AWSMobileClient
+    - AWSS3
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
     - FirebaseCore
+    - FirebaseCrash
     - FirebaseInstanceID
     - FirebaseMessaging
     - GoogleToolboxForMac
@@ -65,10 +96,17 @@ SPEC REPOS:
     - Protobuf
 
 SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AWSAuthCore: f912e4f032092818ee21860a44386c485329a92b
+  AWSCognito: ddd3d4cb90dc0adb47acd199ca9bbe48ea1d18a7
+  AWSCore: a1ff1d32ea7af235fe64be301c204b34cb1f9f83
+  AWSMobileClient: f61ef1ca52cf561a3831f4c29b8bfc43234db8f3
+  AWSS3: e6b042fdbf092ffd49bf7998b3fd5be729949ee7
   Firebase: 7d3b8cd837ad9fcd391657734c0d56dab8e9a5a3
   FirebaseAnalytics: 388b630c15713f5dbf364071f5f3d6077fb52f4e
   FirebaseAuth: bd2738c5c1e92b108ba5f7f7335908097a4e50bb
   FirebaseCore: 2e0b98fb2d64ca8140136beff15772bdd14d2dd7
+  FirebaseCrash: a7d980468dc8aa2db9792493c3e02722d601f6ab
   FirebaseInstanceID: 81df5805a08001e69138664bdd02c6719a9ac80f
   FirebaseMessaging: dfdcd307c2382290a1e297a81d0f18370f5b1bcd
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
@@ -76,6 +114,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
 
-PODFILE CHECKSUM: 39f197e34d7591130717270b8744efec63e4e629
+PODFILE CHECKSUM: 3b1d3e17bffd8f09da030217c6aeee92a1445cd8
 
 COCOAPODS: 1.5.2

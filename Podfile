@@ -6,6 +6,12 @@ target 'GoogleFBSignInApp' do
   use_frameworks!
 
   # Pods for GoogleFBSignInApp
+  #pod 'SwiftGifOrigin'
+  pod 'Firebase/Crash'
   pod 'Firebase/Auth'
   pod 'Firebase/Messaging'
+  pod 'AWSMobileClient', '~> 2.6.13'
+  pod 'AWSS3', '~> 2.6.13'   # For file transfers
+  pod 'AWSCognito', '~> 2.6.13'   #For data sync
+  pod 'Alamofire'
 end

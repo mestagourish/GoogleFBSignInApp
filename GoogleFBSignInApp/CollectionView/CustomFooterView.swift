@@ -37,12 +37,12 @@ class CustomFooterView: UICollectionReusableView {
         self.refreshControlIndicator?.stopAnimating()
         self.refreshControlIndicator?.transform = CGAffineTransform.init(scaleX: 0.0, y: 0.0)
     }
-    
+    //Starts the loader at the bottom of screen
     func startAnimate() {
         self.isAnimatingFinal = true
         self.refreshControlIndicator?.startAnimating()
     }
-    
+    //Stops the loader
     func stopAnimate() {
         self.isAnimatingFinal = false
         self.refreshControlIndicator?.stopAnimating()

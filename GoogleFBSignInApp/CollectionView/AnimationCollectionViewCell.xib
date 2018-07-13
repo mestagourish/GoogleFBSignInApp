@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZAX-Es-f9I" customClass="AnimationCollectionViewCell" customModule="GoogleFBSignInApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="299" height="45"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="299" height="45"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTP-wB-gzZ">
+                        <rect key="frame" x="235" y="5" width="44" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="49" id="IMz-9O-V4x"/>
+                            <constraint firstAttribute="height" constant="34" id="YVR-hf-uTi"/>
+                        </constraints>
+                        <state key="normal" image="song_icon_not_selected_#5f8346">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZl-jD-AJX">
+                        <rect key="frame" x="20" y="12" width="202" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="BPP-32-Af6"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="202" id="OUH-Oi-7B7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="mZl-jD-AJX" firstAttribute="leading" secondItem="rqU-tG-MFX" secondAttribute="leading" constant="20" id="ARg-TW-WjH"/>
+                <constraint firstItem="rqU-tG-MFX" firstAttribute="trailing" secondItem="mTP-wB-gzZ" secondAttribute="trailing" constant="20" id="MWg-C3-tYb"/>
+                <constraint firstItem="mTP-wB-gzZ" firstAttribute="leading" secondItem="mZl-jD-AJX" secondAttribute="trailing" constant="13" id="PQc-nU-SIC"/>
+                <constraint firstItem="mZl-jD-AJX" firstAttribute="top" secondItem="rqU-tG-MFX" secondAttribute="top" constant="12" id="nbM-vn-wPE"/>
+                <constraint firstItem="mTP-wB-gzZ" firstAttribute="top" secondItem="rqU-tG-MFX" secondAttribute="top" constant="5" id="whd-UD-bqC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="rqU-tG-MFX"/>
+            <size key="customSize" width="249" height="40"/>
+            <connections>
+                <outlet property="btnAnimatioName" destination="mTP-wB-gzZ" id="ihh-On-jPg"/>
+                <outlet property="lblAnimationName" destination="mZl-jD-AJX" id="KUH-Zh-Y4D"/>
+            </connections>
+            <point key="canvasLocation" x="36.5" y="216.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="song_icon_not_selected_#5f8346" width="512" height="512"/>
+    </resources>
+</document>
